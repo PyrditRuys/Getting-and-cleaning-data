@@ -85,4 +85,4 @@
 
 ## 5 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
       Final_tidy_data <- merge_group %>% group_by(SubjectIndex, ActivityIndex) %>% summarize_each(funs(mean))
-      write.table(Final_tidy_data, file = "./UCI HAR Dataset/Final_tidy_data.txt")
+      write.table(Final_tidy_data, file = "./UCI HAR Dataset/Final_tidy_data.txt", row.names = FALSE)
